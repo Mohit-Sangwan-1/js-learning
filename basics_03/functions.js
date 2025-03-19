@@ -53,5 +53,43 @@ function loginUserMessage(userName){
     return `${userName} just logged in`
 }
 
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
+
+// function calculateCartPrice(num1){
+//     return num1
+// }
+// console.log(calculateCartPrice(2)); // return 2
+// but if there are multiple items in our cart 
+// function calculateCartPrice(num1){
+//     return num1
+// }
+// console.log(calculateCartPrice(200,400,500)); // it returns just first value 
+// to fix this we will do some operations using rest operator
+function calculateCartPrice(...num1){
+    return num1
+}
+// console.log(calculateCartPrice(200,400,500)); // it returns all values in an array [200,400,500]
+
+// function with object
+
+const course ={
+    courseName : "JS in Hindi",
+    price: 199
+}
+function objectHandle(anyObject){
+    console.log(`Course name is ${anyObject.courseName} and price is ${anyObject.price}`);
+    
+}
+objectHandle(course) // it works fine and return value Course name is JS in Hindi and price is 199
+
+// but we will face problem when data types and name of key changed 
+
+const   myNewArr=[200,400,100,3000]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArr)); // it reutns 400 which isindexed at1
+
+
+
 
